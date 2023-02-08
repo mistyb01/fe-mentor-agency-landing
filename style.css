@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
+
+:root {
+/* primary */
+--soft-red: hsl(7, 99%, 70%);
+--yellow: hsl(51, 100%, 49%);
+--dark-cyan: hsl(167, 40%, 24%);
+--dark-blue: hsl(198, 62%, 26%);
+--footer-bg: hsl(168, 34%, 41%);
+
+/* neutral */
+--very-dark-blue: hsl(212, 27%, 19%);
+--very-dark-grayish-blue: hsl(213, 9%, 39%);
+--dark-grayish-blue: hsl(232, 10%, 55%);
+--grayish-blue: hsl(210, 4%, 67%);
+--white: hsl(0, 0%, 100%);
+
+/* fonts */
+--ff-body: 'Barlow', sans-serif;
+--ff-heading: 'Fraunces', serif;
+}
+ 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 1.125rem;
+    font-family: var(--ff-body);
+}
+
+h1, h2 {
+    font-family: var(--ff-heading);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav {
+    display: none;
+}
+
+.intro-hero {
+    font-size: 1.75rem;
+    color: var(--white);
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 5px;
+
+    background-image: url('./images/mobile/image-header.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 60vh;
+    padding-top: 10rem;
+}
+
+.split > * + * {
+    margin-top: 1.5rem;
+}
+
+.container a {
+    display: inline-block;
+}
