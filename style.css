@@ -37,6 +37,12 @@ h1, h2 {
     font-family: var(--ff-heading);
 }
 
+h2 { 
+    color: var(--very-dark-blue); 
+    font-size: 2rem;
+    line-height: 1.25;
+}
+
 img {
     max-width: 100%;
     display: block;
@@ -73,6 +79,33 @@ nav {
     margin-top: 1.5rem;
 }
 
+.container {
+    text-align: center;
+    padding: 4rem 1rem 4rem 1rem;
+    color: var(--grayish-blue);
+}
 .container a {
     display: inline-block;
+}
+.container p {
+    line-height: 1.75;
+}
+
+.overlap {
+    position: relative;
+}
+
+.overlap .container {
+    position: absolute;
+    bottom: 0rem;
+}
+
+.graphic-design .container {
+    color: var(--dark-cyan);
+    font-size: 1rem;
+}
+
+.photography .container {
+    color: var(--dark-blue);
+    font-size: 1rem;
 }
