@@ -85,6 +85,10 @@ img {
     bottom: 0rem;
 }
 
+.split-horizontal > * + * {
+    margin-left: var(--custom-margin, 3rem);
+}
+
 /* SPECIFIC SECTIONS */
 header {
     position: absolute;
@@ -195,9 +199,6 @@ footer svg {
     color: var(--dark-cyan);
 }
 
-.footer__links > * + * {
-    margin-left: var(--custom-margin, 3rem);
-}
 
 .footer__links.socials {
     --custom-margin: 1rem;
@@ -234,13 +235,21 @@ footer svg {
     width: min-content;
 }
 
-.nav-popup .contact-link {
-    color: var(--dark-blue);
-    font-family: var(--ff-heading);
-    background-color: var(--yellow);
+.contact-link {
     border-radius: 100vw;
     text-transform: uppercase;
-    padding: 1rem;
+    font-family: var(--ff-heading);
+    padding: 1rem;   
+}
+
+.contact-link--popup {
+    color: var(--dark-blue);
+    background-color: var(--yellow);
+} 
+
+.contact-link--nav {
+    color: var(--dark-blue);
+    background-color: var(--white);
 } 
 
 .nav-popup::before {
@@ -258,11 +267,22 @@ footer svg {
 
 /* DESKTOP */
 @media (min-width: 1024px) {
+    header {
+        padding: 2rem;
+    }
+    nav {
+        display: block;
+    }
+
+    nav a {
+        color: var(--white);
+    }
 
     .main-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
+
     .transform-brand {
         order: -1;
     }
@@ -275,17 +295,32 @@ footer svg {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
     }
-    /* todo: make images in html use desktop version of images (srcset?) */
 
     .overlap img {
         width: 50vw;
         aspect-ratio: 1 / 1;
         object-fit: cover;
     }
+
     .overlap {
         height: min-content;
     }
-    
+
+    .intro-hero {
+        background-image: url(./images/desktop/image-header.jpg);
+        height: 95vh;
+        width: 100%;
+        background-size:cover;
+        background-repeat: no-repeat;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .hamburger {
+        display: none;
+    }
 }
 
 .attribution {
