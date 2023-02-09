@@ -258,10 +258,34 @@ footer svg {
 
 /* DESKTOP */
 @media (min-width: 1024px) {
+
+    .main-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .transform-brand {
+        order: -1;
+    }
+      
+    .testimonials-container {
+        flex-direction: row;
+    }
+    
     .gallery {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
     }
+    /* todo: make images in html use desktop version of images (srcset?) */
+
+    .overlap img {
+        width: 50vw;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
+    .overlap {
+        height: min-content;
+    }
+    
 }
 
 .attribution {
