@@ -218,6 +218,7 @@ footer svg {
     padding: 2.5rem 0;
     width: 320px;
     --custom-spacing: 2.5rem;
+    position: relative;
     /* to center an absolutely-positioned element (with a set width) */
     position: absolute;
     margin-left: auto;
@@ -241,6 +242,20 @@ footer svg {
     text-transform: uppercase;
     padding: 1rem;
 } 
+
+.nav-popup::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -1em;
+    right: 0;
+    /* using a gradient to create triangle shape: */
+    width: 1em;
+    height: 1em;
+    background: linear-gradient(to bottom right, transparent 0%, transparent 50%, white 50%, white 100%);
+}
+
+
 /* DESKTOP */
 @media (min-width: 1024px) {
     .gallery {
