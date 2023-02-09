@@ -55,32 +55,8 @@ img {
     height: auto;
 }
 
-header {
-    position: absolute;
-    width: 100%;
-    padding: 1.5rem;
-    display: flex;
-    justify-content: space-between;
-}
 
-nav {
-    display: none;
-}
-
-.intro-hero {
-    font-size: 1.75rem;
-    color: var(--white);
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 5px;
-
-    background-image: url('./images/mobile/image-header.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 60vh;
-    padding-top: 10rem;
-}
-
+/* UTILITY CLASSES */
 .split > * + * {
     margin-top: var(--custom-spacing, var(--default-spacing));
 }
@@ -107,6 +83,33 @@ nav {
 .overlap .container {
     position: absolute;
     bottom: 0rem;
+}
+
+/* SPECIFIC SECTIONS */
+header {
+    position: absolute;
+    width: 100%;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav {
+    display: none;
+}
+
+.intro-hero {
+    font-size: 1.75rem;
+    color: var(--white);
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 5px;
+
+    background-image: url('./images/mobile/image-header.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 60vh;
+    padding-top: 10rem;
 }
 
 .graphic-design .container {
@@ -201,6 +204,44 @@ footer svg {
     margin-top: 5rem;
 }
 
+/* NAV POPUP (MOBILE ONLY) */
+
+.nav-menu {
+    display: none;
+}
+
+.nav-popup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--white);
+    padding: 2.5rem 0;
+    width: 320px;
+    --custom-spacing: 2.5rem;
+    /* to center an absolutely-positioned element (with a set width) */
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 5rem;
+}
+
+.nav-popup a {
+    color: var(--dark-grayish-blue);
+    width: min-content;
+}
+
+.nav-popup .contact-link {
+    color: var(--dark-blue);
+    font-family: var(--ff-heading);
+    background-color: var(--yellow);
+    border-radius: 100vw;
+    text-transform: uppercase;
+    padding: 1rem;
+} 
+/* DESKTOP */
 @media (min-width: 1024px) {
     .gallery {
         display: grid;
