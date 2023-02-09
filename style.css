@@ -19,6 +19,9 @@
 /* fonts */
 --ff-body: 'Barlow', sans-serif;
 --ff-heading: 'Fraunces', serif;
+
+/* spacing */
+--default-spacing: 1.5rem;
 }
  
 *,
@@ -79,7 +82,7 @@ nav {
 }
 
 .split > * + * {
-    margin-top: 1.5rem;
+    margin-top: var(--custom-spacing, var(--default-spacing));
 }
 
 .container {
@@ -178,11 +181,9 @@ nav {
 footer {
     color: var(--footer-fg);
     background-color: var(--footer-bg);
+    --custom-spacing: 3rem;
 }
 
-footer.container {
-    row-gap: 3rem;
-}
 footer a {
     color: var(--footer-fg);
 }
@@ -192,7 +193,12 @@ footer svg {
 }
 
 .footer__links > * + * {
-    margin-left: 3rem;
+    margin-left: var(--custom-margin, 3rem);
+}
+
+.footer__links.socials {
+    --custom-margin: 1rem;
+    margin-top: 5rem;
 }
 
 @media (min-width: 1024px) {
@@ -202,12 +208,11 @@ footer svg {
     }
 }
 
-
 .attribution {
     font-size: 11px;
     text-align: center;
     background-color: var(--footer-bg);
-    padding: 1rem;
+    padding-bottom: 1rem;
   }
 
   .attribution a {
