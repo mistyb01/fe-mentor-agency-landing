@@ -63,14 +63,22 @@ img {
 
 .container {
     text-align: center;
-    padding: 4rem 1rem 4rem 1rem;
     color: var(--grayish-blue);
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 4rem 1rem;
 }
-.container a {
+
+
+.container--light a {
     display: inline-block;
+    font-family: var(--ff-heading);
+    text-transform:uppercase;
+    color: #000;
+    font-size: 1rem;
+    border-bottom: 5px solid var(--accent);
+    padding-bottom: 0;
 }
 .container p {
     line-height: 1.75;
@@ -115,6 +123,15 @@ nav {
     height: 60vh;
     padding-top: 10rem;
 }
+
+.transform-brand {
+    --accent: var(--yellow);
+}
+
+.stand-out {
+    --accent: var(--soft-red);
+}
+
 
 .graphic-design .container {
     color: var(--dark-cyan);
@@ -289,7 +306,7 @@ footer svg {
       
     .testimonials {
     }
-    
+
     .testimonials-container {
         flex-direction: row;
     }
@@ -332,6 +349,25 @@ footer svg {
 
     .hamburger {
         display: none;
+    }
+
+    .testimonials.container {
+        padding: 8rem 4rem;
+    }
+
+    .container--color {
+        padding: 4rem 10rem;
+
+    }
+    .container--light {
+        text-align: left;
+        justify-content: center;
+        align-items:flex-start;
+        height: 100%;
+        padding: 0 7rem;
+    }
+    .container--light h2 {
+        font-size: 2.5rem;
     }
 }
 
